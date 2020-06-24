@@ -1,0 +1,34 @@
+$primary-color:#232323;
+$accent-clor: #f19f07;
+$text-color: #e2d8d8;
+$font-weights:(
+
+  "regular":400,
+  "medium":500,
+  "bold":700
+
+);
+
+body{
+
+  background-color: $primary-color;
+  font-size: map_get($font-weights,bold);
+  color: $text-color;
+}
+
+.main{
+
+  width: 80%;
+  margin: 0 auto;
+
+
+  #{&}_para{
+
+    color: $accent-clor;
+    &:hover{
+
+      color:deeppink;
+    }
+  }
+
+}
