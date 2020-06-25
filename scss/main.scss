@@ -1,23 +1,47 @@
+@import "reset";
+
+@function weight($weight-name){
+
+  @return map_get($font-weights,$weight-name)
+}
 $primary-color:#232323;
 $accent-clor: #f19f07;
 $text-color: #e2d8d8;
+
 $font-weights:(
 
   "regular":400,
   "medium":500,
-  "bold":700
+  "bold":800
 
 );
+@mixin flex($direction){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
 
+}
+
+@mixin theme($light-theme:true){
+
+  @if $light-theme{
+
+    background-color: lighten($primary-color,100%);
+    color: darken($text-color,100%);
+  }
+}
 body{
 
   background-color: $primary-color;
-  font-size: map_get($font-weights,bold);
+  font-weight:weight(regular);
   color: $text-color;
 }
 
 .main{
 
+
+  @include flex(row);
   width: 80%;
   margin: 0 auto;
 
@@ -31,4 +55,8 @@ body{
     }
   }
 
+}
+.light{
+
+  @include theme($light-theme:true);
 }
