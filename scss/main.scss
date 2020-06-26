@@ -58,12 +58,19 @@ body{
   }
 
 
-  #{&}_para{
+  #{&}_para1{
 
     color: $accent-clor;
     &:hover{
 
       color:deeppink;
+    }
+  }
+  #{&}_para2{
+
+    @extend.main_para1;
+    &:hover{
+      color:red;
     }
   }
 

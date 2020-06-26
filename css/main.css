@@ -18,10 +18,12 @@ body {
   @media (max-width: 800px) {
     .main {
       flex-direction: column; } }
-  .main .main_para {
+  .main .main_para1, .main .main_para2 {
     color: #f19f07; }
-    .main .main_para:hover {
+    .main .main_para1:hover, .main .main_para2:hover {
       color: deeppink; }
+  .main .main_para2:hover {
+    color: red; }
 
 .light {
   background-color: white;
