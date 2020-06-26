@@ -15,6 +15,9 @@ body {
   flex-direction: row;
   width: 80%;
   margin: 0 auto; }
+  @media (max-width: 800px) {
+    .main {
+      flex-direction: column; } }
   .main .main_para {
     color: #f19f07; }
     .main .main_para:hover {

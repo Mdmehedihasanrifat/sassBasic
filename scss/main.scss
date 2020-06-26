@@ -1,5 +1,6 @@
 @import "reset";
 
+
 @function weight($weight-name){
 
   @return map_get($font-weights,$weight-name)
@@ -7,6 +8,14 @@
 $primary-color:#232323;
 $accent-clor: #f19f07;
 $text-color: #e2d8d8;
+$mobile:800px;
+
+@mixin  mobile{
+
+  @media(max-width: $mobile) {
+  @content
+  }
+}
 
 $font-weights:(
 
@@ -44,6 +53,9 @@ body{
   @include flex(row);
   width: 80%;
   margin: 0 auto;
+  @include mobile{
+    flex-direction: column;
+  }
 
 
   #{&}_para{
